@@ -41,10 +41,11 @@ I hope you enjoyed project and the experiments that have been created to observe
 
 Thank you.
 
-<br>
-![nam file](https://github.com/Sirpip91/NS2-Networks-Trace-File-Analysis/blob/main/wirelesslan/nam.png)
-
+<img src = "[nam.PNG](https://github.com/Sirpip91/NS2-Networks-Trace-File-Analysis/blob/main/wirelesslan/nam.png)" width= "500" >
 <br>
 
-![website banner](https://github.com/Sirpip91/NS2-Networks-Trace-File-Analysis/blob/main/wirelesslan/10nodewirelesslan.png)
+
+<br>
+<img src = "[10nodewirelesslan.png](https://github.com/Sirpip91/NS2-Networks-Trace-File-Analysis/blob/main/wirelesslan/10nodewirelesslan.png)" width= "500" >
+
 
