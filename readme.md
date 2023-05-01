@@ -41,11 +41,39 @@ I hope you enjoyed project and the experiments that have been created to observe
 
 Thank you.
 
-<img src = "[nam.PNG](https://github.com/Sirpip91/NS2-Networks-Trace-File-Analysis/blob/main/wirelesslan/nam.png)" width= "500" >
 <br>
 
+# How to Run:
+
+<b> 1. First create your .tcl script and run:</br>
+```
+user$ ns filename.tcl
+```
+
+<b> 2. Two other files will be created the .nam (gui) and the .tr (trace)</br>
+
+<b> 3. The files then can be run with the .awk scripts example:</br>
+```
+user$ gawk -f thoughputavg.awk wirelessLan.tr
+```
+
+ ![website banner](https://github.com/Sirpip91/NS2-Networks-Trace-File-Analysis/blob/main/wirelesslan/Picture2.png)
+
+<b> 4. To create graphs edit the makegraph.sh with correct files, then run:</br>
+```
+user$ gnuplot makegraph.sh
+```
+
+<b> Note: For the Graph, the awk scrip must format the information into a .txt file before the .sh and gnuplot can create graph.</br>
 
 <br>
-<img src = "[10nodewirelesslan.png](https://github.com/Sirpip91/NS2-Networks-Trace-File-Analysis/blob/main/wirelesslan/10nodewirelesslan.png)" width= "500" >
 
+# Nam Viewed using NS
 
+ ![website banner](https://github.com/Sirpip91/NS2-Networks-Trace-File-Analysis/blob/main/wirelesslan/nam.png)
+
+<br>
+
+# Graph created using GNU plot
+
+ ![website banner](https://github.com/Sirpip91/NS2-Networks-Trace-File-Analysis/blob/main/wirelesslan/10nodewirelesslan.png)
