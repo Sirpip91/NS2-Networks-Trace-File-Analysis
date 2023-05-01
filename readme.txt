@@ -1,11 +1,11 @@
 #shell script to run with gnuplot
 
-This project was created for studying CSMA/CD and 802.11 (CSMA/CD) Protocols
+<b> This project was created for studying CSMA/CD and 802.11 (CSMA/CD) Protocols</b>
 
 Structure of the project:
 The two types of networks are separated into Two folders:
 
-1. wiredlan
+<b>1. wiredlan </b>
     This folder contains the files for wired LAN; CSMA/CD Protocols
     wiredlan.tcl is the original tcl;
     wiredlanincreased7.tcl; and wiredlanincreased.tcl are the additional loads done to the network.
@@ -20,7 +20,7 @@ The two types of networks are separated into Two folders:
 
 
 
-2. wirelesslan
+<b>2. wirelesslan</b>
     This folder contains the files for wireless LAN; Ad Hoc mode 802.11 Protocols
     wirelessLan.tcl is the original ns2 file to build upon.
     wirelessLan5nodes.tcl showcases additional load with 5 nodes.
