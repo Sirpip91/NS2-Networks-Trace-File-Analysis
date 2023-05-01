@@ -1,4 +1,4 @@
-#shell script to run with gnuplot
+# Networks Trace File Analysis
 
 <b> This project was created for studying CSMA/CD and 802.11 (CSMA/CD) Protocols</b>
 
