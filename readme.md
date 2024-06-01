@@ -1,79 +1,71 @@
-# Networks Trace File Analysis
+# 🌐 Networks Trace File Analysis
 
-<b> This project was created for studying CSMA/CD and 802.11 (CSMA/CD) Protocols</b>
+**This project was created for studying CSMA/CD and 802.11 (CSMA/CD) Protocols**
 
-Structure of the project:
-The two types of networks are separated into Two folders:
+## 🗂 Project Structure
 
-<b>1. wiredlan </b>
-    This folder contains the files for wired LAN; CSMA/CD Protocols
-    wiredlan.tcl is the original tcl;
-    wiredlanincreased7.tcl; and wiredlanincreased.tcl are the additional loads done to the network.
-    
-    we then have packetdeliveryratiowired.awk and throughputwired.awk
-    these are the wired networks program to create the data output and formated text for graphs.
+The project is organized into two main folders, each corresponding to a type of network:
 
-    test.txt is the output used to creat graphs for wired.
+### 1. 🌐 Wired LAN
+This folder contains files related to wired LAN using CSMA/CD protocols.
 
-    also are .png which are created from the outputs from our makegraph.sh
-    I have left them to see :)
+- **Files:**
+  - `wiredlan.tcl`: The original TCL script.
+  - `wiredlanincreased7.tcl` and `wiredlanincreased.tcl`: Scripts with additional network load.
+  
+- **AWK Scripts:**
+  - `📄 packetdeliveryratiowired.awk` and `📄 throughputwired.awk`: These scripts generate data outputs and formatted text for graphs.
 
+- **Outputs:**
+  - `📄 test.txt`: Output used for creating graphs.
+  - 📊 Various `.png` files generated from the outputs using `makegraph.sh`.
 
+### 2. 📡 Wireless LAN
+This folder contains files related to wireless LAN in Ad Hoc mode using 802.11 protocols.
 
-<b>2. wirelesslan</b>
-    This folder contains the files for wireless LAN; Ad Hoc mode 802.11 Protocols
-    wirelessLan.tcl is the original ns2 file to build upon.
-    wirelessLan5nodes.tcl showcases additional load with 5 nodes.
-    we then have 10node.tcl which showcases 10 nodes
+- **Files:**
+  - `wirelessLan.tcl`: The original NS2 script.
+  - `wirelessLan5nodes.tcl`: Script showcasing additional load with 5 nodes.
+  - `10node.tcl`: Script showcasing 10 nodes.
 
+- **AWK Scripts:**
+  - `📄 packetdeliveryratio.awk`, `📄 throughput.awk`, and `📄 throughputavg.awk`: These scripts output necessary information for wireless networks.
 
-    we then have packetdeliveryratio.awk, throughput.awk, and throughputavg.awk
-    each of these output the needed information for wireless networks in the terminal.
+- **Outputs:**
+  - 📊 Various `.txt` files created to be used by `makegraph.sh` to generate `.png` graphs.
 
-    there are .txt which are created to use  makegraph.sh shell script that outputs
-    the .png that are the graphs.
+Each script is located in the appropriate folder for its specific network setting (wireless/wired).
 
-each script is in the folder that it needs to be in for that particular network setting (wireless/wired).
-
-
-I hope you enjoyed project and the experiments that have been created to observer network behavior.
-
+I hope you find this project and the experiments conducted to observe network behavior informative and useful.
 
 Thank you.
 
-<br>
+## 🛠 How to Run
 
-# How to Run:
+1. **Create and run your .tcl script:**
+    ```sh
+    ns filename.tcl
+    ```
 
-<b> 1. First create your .tcl script and run:</br>
-```
-user$ ns filename.tcl
-```
+2. **Two files will be created:**
+   - 📄 `.nam` (GUI)
+   - 📄 `.tr` (trace)
 
-<b> 2. Two other files will be created the .nam (gui) and the .tr (trace)</br>
+3. **Run the .awk scripts on the .tr file:**
+    ```sh
+    gawk -f throughputavg.awk wirelessLan.tr
+    ```
 
-<b> 3. The files then can be run with the .awk scripts example:</br>
-```
-user$ gawk -f thoughputavg.awk wirelessLan.tr
-```
+    ![Graph Example](https://github.com/Sirpip91/NS2-Networks-Trace-File-Analysis/blob/main/wirelesslan/Picture2.png)
 
- ![website banner](https://github.com/Sirpip91/NS2-Networks-Trace-File-Analysis/blob/main/wirelesslan/Picture2.png)
+4. **Create graphs:**
+   - Edit `makegraph.sh` with the correct files, then run:
+    ```sh
+    gnuplot makegraph.sh
+    ```
 
-<b> 4. To create graphs edit the makegraph.sh with correct files, then run:</br>
-```
-user$ gnuplot makegraph.sh
-```
+**🔔 Note:** Before running the .sh and gnuplot to create graphs, ensure the AWK scripts format the information into a .txt file.
 
-<b> Note: For the Graph, the awk scrip must format the information into a .txt file before the .sh and gnuplot can create graph.</br>
+## 🖥 NAM View in NS
 
-<br>
-
-# Nam Viewed using NS
-
- ![website banner](https://github.com/Sirpip91/NS2-Networks-Trace-File-Analysis/blob/main/wirelesslan/nam.png)
-
-<br>
-
-# Graph created using GNU plot
-
- ![website banner](https://github.com/Sirpip91/NS2-Networks-Trace-File-Analysis/blob/main/wirelesslan/10nodewirelesslan.png)
+![NAM View](https://github.com/Sirpip91/NS2-Networks-Trace-File-Analysis/blob/main/wirelesslan/nam.png)
